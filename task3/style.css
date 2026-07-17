@@ -1,0 +1,62 @@
+/* Step 3 */
+body {
+    background-color: coral;
+    font-family: Arial, sans-serif;
+    border: 4px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Step 5 */
+.head {
+    color: darkblue;
+}
+
+/* Step 6 */
+#bglime {
+    background-color: lime;
+}
+
+/* Step 7 */
+#bglime span {
+    color: red;
+}
+
+/* Step 8 */
+p {
+    color: white;
+    font-size: 20px;
+}
+
+/* Step 9 */
+#para {
+    color: green;
+}
+
+/* Step 10 */
+#para span {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Step 11 */
+a {
+    color: yellow;
+    background-color: green;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+
+a:hover {
+    color: white;
+    background-color: blue;
+}
+
+ol li:nth-child(2) {
+    color: blue;
+}
+
+ol li:nth-child(3) {
+    color: red;
+}
