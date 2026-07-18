@@ -1,0 +1,178 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* Main Card */
+
+.container{
+
+    width:88%;
+    height:88vh;
+    display:flex;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+/* Left */
+
+.left{
+
+    flex:1;
+    background:#1ea0f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.left img{
+
+    width:62%;
+}
+
+/* Right */
+
+.right{
+
+    flex:1;
+    background:#f8fcff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.login-box{
+
+    width:68%;
+}
+
+/* Heading */
+
+h1{
+
+    font-size:54px;
+    color:#263238;
+    font-weight:700;
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#6b7280;
+    font-size:20px;
+    margin-bottom:50px;
+
+}
+
+/* Labels */
+
+label{
+
+    display:block;
+    margin-bottom:10px;
+    color:#606d80;
+    font-size:18px;
+
+}
+
+/* Inputs */
+
+input{
+
+    width:100%;
+    height:58px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding:0 18px;
+    font-size:18px;
+    background:#ffffff;
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+    margin-bottom:28px;
+
+}
+
+input::placeholder{
+
+    color:#d0d0d0;
+
+}
+
+/* Forgot */
+
+.forgot{
+
+    text-align:right;
+    margin-top:-10px;
+    margin-bottom:35px;
+
+}
+
+.forgot a{
+
+    text-decoration:none;
+    color:#556677;
+    font-size:16px;
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+    height:62px;
+    border:none;
+    border-radius:14px;
+    background:#1ea0f2;
+    color:white;
+    font-size:28px;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#148be0;
+
+}
+
+/* Register */
+
+.register{
+
+    text-align:center;
+    margin-top:55px;
+    color:#6b7280;
+    font-size:16px;
+
+}
+
+.register a{
+
+    color:#2d8cff;
+    font-weight:600;
+    text-decoration:none;
+
+}
