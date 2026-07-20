@@ -1,18 +1,10 @@
-# Laundry Mart - Button Hover Effect
+# Laundry Mart - Image Animation
 
 ## Project Description
 
-This project adds a hover effect to the "Book a Service Today" button in the Laundry Mart landing page.
+This project adds a CSS animation to the hero section image of the Laundry Mart website.
 
-The effect is created using only CSS. When the user moves the mouse over the button, it becomes slightly larger and tilts, making the interface more interactive.
-
-## Features
-
-- Hover animation using CSS
-- Button increases in size on hover
-- Button tilts slightly on hover
-- Smooth transition effect
-- No JavaScript used
+The animation makes the image move in a small orbit while slightly rotating and stretching. The goal is to make the hero section more interactive without using JavaScript.
 
 ## Files
 
@@ -28,20 +20,34 @@ Project Folder
 - HTML5
 - CSS3
 
-## Hover Effect Used
+## Features
 
-The button uses the following CSS properties:
+- Orbit-like image movement
+- Rotation effect
+- Stretch and squeeze effect
+- Infinite smooth animation
+- CSS Keyframes only
+- No JavaScript
 
-- `transform: scale()` to increase the button size.
-- `transform: rotate()` to tilt the button.
-- `transition` to make the animation smooth.
+## How to Run
 
-## Learning Outcome
+1. Save all files in the same folder.
+2. Open `index.html` in your browser.
+3. The hero image will automatically animate.
 
-After completing this task, I learned:
+## CSS Concepts Used
 
-- How to use the `:hover` pseudo-class.
-- How to apply CSS `transform` properties.
-- How `scale()` changes the size of an element.
-- How `rotate()` tilts an element.
-- How `transition` creates smooth animations without JavaScript.
+- `@keyframes`
+- `animation`
+- `transform`
+- `translate()`
+- `rotate()`
+- `scale()`
+
+## What I Learned
+
+- How to create animations using `@keyframes`.
+- How multiple transforms can be combined in a single animation.
+- How to use `translate()` to move an element.
+- How `rotate()` changes the orientation of an element.
+- How `scaleX()` and `scaleY()` can create a squeeze effect.
