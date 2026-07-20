@@ -253,3 +253,28 @@ nav{
 
 }
 
+.book-btn{
+
+    background:#1ea0f2;
+    color:white;
+
+    border:none;
+
+    padding:18px 40px;
+
+    border-radius:12px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+}
+
+.book-btn:hover{
+
+    transform:scale(1.08) rotate(-4deg);
+
+}
