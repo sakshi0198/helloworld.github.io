@@ -1,83 +1,74 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background:#fff;
+body {
+    background: #fff;
 }
 
-/* Navbar */
 
-nav{
+/* ---------- Navbar ---------- */
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
 }
 
-.logo{
-
-    font-size:32px;
-    font-weight:bold;
-    color:#3e5168;
-
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3e5168;
 }
 
-.nav-links{
-
-    display:flex;
-    list-style:none;
-    gap:30px;
-
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.nav-links a{
-
-    text-decoration:none;
-    color:#666;
-
+.nav-links a {
+    text-decoration: none;
+    color: #666;
 }
 
-.right-nav{
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.user{
-
-    background:#e9f5ff;
-    color:#1ea0f2;
-    padding:10px 18px;
-    border-radius:10px;
-    font-weight:bold;
-
+.user {
+    background: #e9f5ff;
+    color: #1ea0f2;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-/* Hamburger */
 
-.menu-box{
+/* ---------- Mobile Menu ---------- */
+
+.menu-box {
     position: relative;
 }
 
-.menu-btn{
+.menu-btn {
     display: none;
     border: none;
     background: none;
     font-size: 28px;
+    color: #3e5168;
     cursor: pointer;
-    color: #34495e;
 }
 
-/* Hidden by default */
-.mobile-menu{
-
+.mobile-menu {
     display: none;
     position: fixed;
     top: 0;
@@ -87,224 +78,162 @@ nav{
     background: #000;
     padding-top: 180px;
     text-align: center;
-    z-index: 999;
-
 }
 
-.mobile-menu a{
-
+.mobile-menu a {
     display: block;
-    color: white;
+    margin: 30px 0;
+    color: #fff;
     text-decoration: none;
     font-size: 28px;
-    margin: 30px 0;
-
 }
 
-.menu-box:focus-within .mobile-menu{
+/* Show menu when button is focused */
 
+.menu-box:focus-within .mobile-menu {
     display: block;
-
 }
 
-/* CSS only toggle */
 
-.menu-box:focus-within .mobile-menu{
+/* ---------- Hero Section ---------- */
 
-    display:block;
-
-}
-
-/* Hero */
-
-.hero{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:85%;
-    margin:40px auto;
-
-}
-
-.left{
-
-    width:48%;
-
-}
-
-.right{
-
-    width:48%;
-    text-align:center;
-
-}
-
-.right img{
-
-    width:75%;
-
-}
-
-.left h1{
-
-    font-size:60px;
-    color:#46586a;
-
-}
-
-.left span{
-
-    color:#1ea0f2;
-
-}
-
-.left p{
-
-    margin:25px 0;
-    color:#777;
-    line-height:1.6;
-    font-size:20px;
-
-}
-
-.book-btn{
-
-    background:#1ea0f2;
-    color:white;
-    border:none;
-    padding:18px 35px;
-    border-radius:12px;
-    cursor:pointer;
-
-}
-
-/* Tablet */
-
-@media(max-width:992px){
-
-.left h1{
-
-    font-size:42px;
-
-}
-
-.right img{
-
-    width:90%;
-
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.nav-links{
-
-    display:none;
-
-}
-
-.menu-btn{
-
-    display:block;
-
-}
-
-.hero{
-
-    flex-direction:column;
-
+.hero {
+    width: 85%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left,
-.right{
-
-    width:100%;
-
+.right {
+    width: 48%;
 }
 
-.left h1{
-
-    font-size:42px;
-
+.right {
+    text-align: center;
 }
 
-.left p{
-
-    font-size:18px;
-
+.left h1 {
+    font-size: 60px;
+    color: #46586a;
 }
 
-.book-btn{
-
-    width:100%;
-
+.left h1 span {
+    color: #1ea0f2;
 }
 
-.right img{
-
-    width:70%;
-    margin-top:30px;
-
+.left p {
+    margin: 25px 0;
+    color: #777;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
+
+/* ---------- Button ---------- */
+
+.book-btn {
+    padding: 18px 40px;
+    background: #1ea0f2;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.book-btn{
-
-    background:#1ea0f2;
-    color:white;
-    border:none;
-    padding:18px 40px;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s ease;
-
+.book-btn:hover {
+    transform: scale(1.08) rotate(-4deg);
 }
 
-.book-btn:hover{
 
-    transform:scale(1.08) rotate(-4deg);
-
-}
+/* ---------- Image Animation ---------- */
 
 .right img {
     width: 100%;
     max-width: 400px;
     height: auto;
-    /* Apply the custom animation */
-    animation: orbitAndSqueeze 8s infinite ease-in-out;
-    transform-origin: center center;
-    will-change: transform;
+    animation: floatImage 8s ease-in-out infinite;
+    transform-origin: center;
 }
 
-/* 
-  @keyframes: orbitAndSqueeze
-  Simulates an orbital track (using X and Y coordinate shifts) 
-  while simultaneously applying a dynamic scale (squeeze) factor.
-*/
-@keyframes orbitAndSqueeze {
+@keyframes floatImage {
+
     0% {
-        transform: translate(0px, 0px) scale(1, 1);
+        transform: translate(0, 0) scale(1);
     }
+
     25% {
-        /* Squeezed vertically / elongated horizontally at top right orbit */
         transform: translate(30px, -20px) scale(1.08, 0.92);
     }
+
     50% {
-        /* Normal scale at the opposite end of the orbit path */
-        transform: translate(10px, 30px) scale(1, 1);
+        transform: translate(10px, 30px) scale(1);
     }
+
     75% {
-        /* Squeezed horizontally / elongated vertically at bottom left orbit */
         transform: translate(-30px, 10px) scale(0.92, 1.08);
     }
+
     100% {
-        transform: translate(0px, 0px) scale(1, 1);
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+
+    .left h1 {
+        font-size: 42px;
+    }
+
+    .right img {
+        max-width: 350px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 42px;
+    }
+
+    .left p {
+        font-size: 18px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+    .right img {
+        width: 70%;
+        margin-top: 30px;
     }
 }
