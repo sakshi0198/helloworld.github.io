@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala 7 | Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="payment-container">
+
+    <!-- Left Side -->
+
+    <div class="checkout-left">
+
+        <p class="checkout-title">Checkout</p>
+
+        <h2>Contact Details</h2>
+
+        <label>Email ID</label>
+        <input type="email" placeholder="john@example.com">
+
+        <h2>Payment</h2>
+
+        <div class="payment-methods">
+
+            <div class="method active">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>Card</span>
+            </div>
+
+            <div class="method">
+                <i class="fa-brands fa-bitcoin"></i>
+                <span>Crypto</span>
+            </div>
+
+            <div class="method">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Bank</span>
+            </div>
+
+            <div class="method">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+        </div>
+
+        <div class="card-form">
+
+            <label>Card Number</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+
+            <div class="row">
+
+                <div>
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+
+                <div>
+                    <label>CVV</label>
+                    <input type="password" placeholder="***">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div>
+                    <label>Country</label>
+
+                    <select>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>ZIP</label>
+                    <input type="text" placeholder="400001">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="checkout-right">
+
+        <h1>Order Summary</h1>
+
+        <div class="summary">
+
+            <label>Enter Coupon Code</label>
+
+            <div class="coupon">
+
+                <input type="text" placeholder="COUPON CODE">
+
+                <button>Apply Coupon</button>
+
+            </div>
+
+            <div class="bill">
+
+                <p><span>Sub Total</span><span>₹4,700</span></p>
+
+                <p><span>Taxes</span><span>₹199</span></p>
+
+                <p><span>Discount</span><span>₹0</span></p>
+
+                <hr>
+
+                <h3><span>Total</span><span>₹4,999</span></h3>
+
+            </div>
+
+        </div>
+
+        <button class="pay-btn">
+            Pay Now ₹4,999
+        </button>
+
+        <div class="payment-icons">
+
+            <i class="fa-brands fa-cc-visa"></i>
+
+            <i class="fa-brands fa-cc-mastercard"></i>
+
+            <i class="fa-brands fa-google-pay"></i>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+    </div>
+    </div>
+    </body>
+    </html>
