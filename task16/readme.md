@@ -1,16 +1,12 @@
-# JavaScript Array Operations
+# Student Records Search
 
 ## About the Project
 
-This project performs different operations on an array using JavaScript functions.
+This project is a simple web page created using **HTML**, **CSS**, and **JavaScript**.
 
-The program uses one dummy array and finds:
+It displays student records in the form of cards. Each card contains the student's name, marks, class, and address. A search box is also provided so users can search for a student by name. The search is performed only after clicking the **Search** button.
 
-- Maximum number
-- Sum of all elements
-- Count of odd numbers
-
-The output is displayed in the browser console.
+This project helped me understand how JavaScript can be used to display and filter data on a webpage.
 
 ---
 
@@ -22,10 +18,10 @@ The output is displayed in the browser console.
 
 ---
 
-## Files
+## Project Files
 
 ```
-Array-Operations/
+Student-Records/
 │
 ├── index.html
 ├── style.css
@@ -35,41 +31,52 @@ Array-Operations/
 
 ---
 
-## Functions Used
+## Features
 
-This assignment uses different types of JavaScript functions:
-
-- Normal Function
-- Arrow Function
-- Anonymous Function
-
----
-
-## Sample Output
-
-```
-Array: [4, 8, 2, 11, 6, 7, 10]
-
-Maximum number: 11
-
-Sum of all elements: 48
-
-Count of odd numbers: 2
-```
+- Display student information using cards.
+- Search students by their name.
+- Shows matching records after clicking the **Search** button.
+- Uses the **map()** function to create the student cards.
+- Uses the **filter()** function to search students.
+- Simple and responsive layout using Flexbox.
 
 ---
 
 ## How to Run
 
-1. Open the project folder.
-2. Open `index.html` in your browser.
-3. Press **F12** and open the **Console** tab.
-4. View the output.
+1. Download or clone the project.
+2. Open the project folder.
+3. Open **index.html** in your browser.
+4. Type a student's name in the search box.
+5. Click the **Search** button.
+6. The matching student records will be displayed on the page.
+
+---
+
+## JavaScript Concepts Used
+
+- Arrays
+- Objects
+- Functions
+- map()
+- filter()
+- Event Listeners
+- DOM Manipulation
 
 ---
 
 ## What I Learned
 
-While working on this assignment, I practiced creating different types of JavaScript functions and passing an array as an argument. I also learned how to use loops to find the maximum value, calculate the sum of elements, and count odd numbers. Separating each task into its own function made the code easier to understand and test.
+While working on this assignment, I learned how to store multiple student records using an array of objects. I practiced using the **map()** function to display the student cards dynamically and the **filter()** function to search for matching students. I also learned how to handle button click events and update the webpage without reloading it.
+
+One challenge I faced was understanding how to display only the searched students. After trying different approaches, I understood how `filter()` returns only the matching records and how `map()` can be used to display them.
+
+---
+
+## Output
+
+- Displays all student records when the page loads.
+- Filters records only after clicking the **Search** button.
+- Shows a "Search Results" heading after searching.
 
 ---
