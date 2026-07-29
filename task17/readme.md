@@ -1,24 +1,24 @@
-# Division Using Promise
+# Promise Division Assignment
 
 ## About
 
-This project is a simple JavaScript assignment that performs division using **Promises**.
+This assignment helped me understand how JavaScript Promises work.
 
-The program takes two numbers, divides the first number by the second, and returns the result using a Promise.
+I created a function that divides two numbers. If the second number is not zero, the Promise is resolved and the result is displayed. If the second number is zero, the Promise is rejected with an error message.
 
-If the second number is zero, the Promise is rejected with an error message.
+I tested the function with five different examples to check both success and error cases.
 
 ---
 
 ## Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 
 ---
 
-## Project Structure
+## Files
 
 ```
 Promise-Division/
@@ -31,49 +31,28 @@ Promise-Division/
 
 ---
 
-## Features
-
-- Uses an **arrow function**.
-- Returns a **Promise**.
-- Handles division by zero.
-- Uses `.then()` and `.catch()`.
-- Includes five different test cases.
-- Displays results in the browser console.
-
----
-
 ## How to Run
 
 1. Open the project folder.
-2. Open **index.html** in your browser.
-3. Press **F12** and open the **Console** tab.
-4. View the output of all test cases.
+2. Open `index.html` in your browser.
+3. Press **F12**.
+4. Open the **Console** tab.
+5. Check the output for all five test cases.
 
 ---
 
 ## What I Learned
 
-In this assignment, I learned how to create and use JavaScript Promises. I understood how `resolve()` is used when the operation is successful and how `reject()` is used to handle errors like division by zero. I also practiced using arrow functions and handling Promise results with `.then()` and `.catch()`.
+At first, I was confused about when to use `resolve()` and `reject()`. After trying different examples, I understood that `resolve()` is used when the task is completed successfully and `reject()` is used when an error occurs.
+
+I also learned how `.then()` receives the successful result and `.catch()` handles the error message.
+
+Adding `console.log()` statements helped me understand the order in which the Promise runs.
 
 ---
 
-## Sample Output
+## Challenges
 
-```
-Dividing 10 by 2...
-Result: 5
-
-Dividing 20 by 4...
-Result: 5
-
-Dividing 15 by 3...
-Result: 5
-
-Dividing 10 by 0...
-Error: Division by zero is not allowed.
-
-Dividing 50 by 5...
-Result: 10
-```
+The main challenge was understanding why the Promise does not immediately return the result. After reading about Promise flow and testing different values, I became more comfortable using `.then()` and `.catch()`.
 
 ---
