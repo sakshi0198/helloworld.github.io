@@ -1,0 +1,57 @@
+body{
+
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+
+    background:#efefef;
+    text-align:center;
+    padding:20px;
+    font-weight:normal;
+
+}
+
+.box-container{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:120px;
+
+}
+
+.box{
+
+    width:100px;
+    height:100px;
+    border:1px solid #cccccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+
+}
+
+.input-area{
+
+    margin-top:120px;
+    text-align:center;
+
+}
+
+input{
+
+    width:220px;
+    padding:10px;
+
+}
+
+button{
+
+    padding:10px 20px;
+    cursor:pointer;
+
+}
