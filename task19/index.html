@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= Navbar ================= -->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Logo
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="user-profile">
+                <span class="username">
+                    Username
+                </span>
+                <button class="logout-btn">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= Main Container ================= -->
+
+    <main class="container">
+
+        <!-- ================= Left Panel ================= -->
+
+        <section class="left-panel">
+            <!-- Added Items -->
+            <div class="card">
+                <h2 class="title">
+                    Added Items
+                </h2>
+                <div class="table-container">
+    <table>
+
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Service Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody id="cartTable">
+            <tr id="emptyRow">
+                <td colspan="3" class="empty">
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <h3>No Items Added</h3>
+                    <p>Add items to the cart from the services bar</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                <div class="total-section">
+                    <h3>Total Amount</h3>
+                    <h3 id="totalPrice">
+                        ₹0.00
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Booking Form -->
+
+            <div class="card booking-card">
+                <h2>Book Now</h2>
+                <form id="bookingForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="John Doe"
+                            required>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Email ID</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="mailid@gmail.com"
+                                required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="9876543210"
+                                maxlength="10"
+                                required>
+                        </div>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="book-btn">
+                        Book Now
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= Right Panel ================= -->
+
+        <section class="right-panel">
+            <div class="card">
+                <h1>
+                    Browse Our Services
+                </h1>
+
+                <p class="sub-title">
+                    Click on the add to cart button to add the services to your cart or press skip
+                </p>
+                <hr>
+                <!-- Service Card -->
+
+                <div class="service-card">
+                    <img
+                        id="serviceImage"
+                        src="../task19/images/laundry.png"
+                        alt="Service">
+
+                    <div class="service-info">
+                        <h2 id="serviceName">
+                            Dry Cleaning
+                        </h2>
+                        <h2 id="servicePrice">
+                            ₹200.00
+                        </h2>
+                    </div>
+                    <div class="button-group">
+
+                        <button
+                            id="skipBtn"
+                            class="skip-btn">
+                            Skip Item
+                            <i class="fa-regular fa-circle-minus"></i>
+
+                        </button>
+
+                        <button
+                            id="addBtn"
+                            class="add-btn">
+                            Add Item
+                            <i class="fa-regular fa-circle-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <div class="bottom-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>
+                        Add the items to the cart and book now
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
