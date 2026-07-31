@@ -1,181 +1,149 @@
 // ===============================
-// Service Booking App
+// Service Booking Application
 // ===============================
 
-// Available Services
-
-const services = [
+// Services Data
+var services = [
     {
         name: "Dry Cleaning",
         price: 200,
-        image: "images/dry-cleaning.jpg"
+        image: "../task19/images/dry.png"
     },
     {
         name: "Sofa Cleaning",
-        price: 500,
-        image: "images/sofa-cleaning.jpg"
+        price: 400,
+        image: "../task19/images/sofa.jpg"
     },
     {
         name: "Carpet Cleaning",
-        price: 450,
-        image: "images/carpet-cleaning.jpg"
+        price: 350,
+        image: "../task19/images/carpet.jpg"
     },
     {
         name: "Laundry",
         price: 250,
-        image: "images/laundry.jpg"
+        image: "../task19/images/laundry.png"
     },
     {
         name: "Leather Cleaning",
-        price: 600,
-        image: "images/leather-cleaning.jpg"
+        price: 500,
+        image: "../task19/images/leather.jpg"
     }
 ];
 
-// ===============================
 // Variables
-// ===============================
+var currentService = 0;
+var cart = [];
 
-let currentIndex = 0;
-let cart = [];
+// HTML Elements
+var serviceImage = document.getElementById("serviceImage");
+var serviceName = document.getElementById("serviceName");
+var servicePrice = document.getElementById("servicePrice");
 
-// ===============================
-// Elements
-// ===============================
+var addButton = document.getElementById("nextCartButton");
+var skipButton = document.getElementById("skipButton");
+var bookButton = document.getElementById("bookButton");
 
-const serviceImage = document.getElementById("serviceImage");
-const serviceName = document.getElementById("serviceName");
-const servicePrice = document.getElementById("servicePrice");
-
-const addBtn = document.getElementById("addBtn");
-const skipBtn = document.getElementById("skipBtn");
-
-const cartTable = document.getElementById("cartTable");
-const totalPrice = document.getElementById("totalPrice");
-const emptyRow = document.getElementById("emptyRow");
-
-const bookingForm = document.getElementById("bookingForm");
+var cartTable = document.getElementById("cartTable");
+var totalPrice = document.getElementById("totalPrice");
 
 // ===============================
-// Show Current Service
+// Display Service
 // ===============================
 
-function loadService() {
+function showService() {
 
-    if (currentIndex >= services.length) {
+    if (currentService >= services.length) {
 
         serviceImage.src = "";
         serviceName.innerHTML = "No More Services";
         servicePrice.innerHTML = "";
 
-        addBtn.disabled = true;
-        skipBtn.disabled = true;
+        addButton.disabled = true;
+        skipButton.disabled = true;
 
         return;
     }
 
-    const service = services[currentIndex];
-
-    serviceImage.src = service.image;
-    serviceName.textContent = service.name;
-    servicePrice.textContent = "₹" + service.price.toFixed(2);
+    serviceImage.src = services[currentService].image;
+    serviceName.innerHTML = services[currentService].name;
+    servicePrice.innerHTML = "₹" + services[currentService].price;
 }
 
-loadService();
+showService();
 
 // ===============================
-// Add Item
+// Add Service
 // ===============================
 
-addBtn.addEventListener("click", () => {
+addButton.onclick = function () {
 
-    const service = services[currentIndex];
+    cart.push(services[currentService]);
 
-    const exists = cart.find(item => item.name === service.name);
+    updateTable();
 
-    if (!exists) {
+    currentService++;
 
-        cart.push(service);
+    showService();
 
-        updateCart();
-    }
-
-    currentIndex++;
-
-    loadService();
-
-});
+};
 
 // ===============================
-// Skip Item
+// Skip Service
 // ===============================
 
-skipBtn.addEventListener("click", () => {
+skipButton.onclick = function () {
 
-    currentIndex++;
+    currentService++;
 
-    loadService();
+    showService();
 
-});
+};
 
 // ===============================
 // Update Cart
 // ===============================
 
-function updateCart() {
+function updateTable() {
 
     cartTable.innerHTML = "";
 
-    if (cart.length === 0) {
+    var total = 0;
 
-        cartTable.innerHTML = `
+    if (cart.length == 0) {
 
-        <tr id="emptyRow">
+        cartTable.innerHTML =
+            "<tr>" +
+            "<td colspan='3'>No Items Added</td>" +
+            "</tr>";
 
-            <td colspan="3" class="empty">
-
-                <div class="empty-icon">
-                    <i class="fa-solid fa-circle-info"></i>
-                </div>
-
-                <h3>No Items Added</h3>
-
-                <p>Add items to the cart from the services bar</p>
-
-            </td>
-
-        </tr>
-
-        `;
-
-        totalPrice.textContent = "₹0.00";
+        totalPrice.innerHTML = "₹0";
 
         return;
     }
 
-    let total = 0;
+    for (var i = 0; i < cart.length; i++) {
 
-    cart.forEach((item, index) => {
+        var row = document.createElement("tr");
 
-        total += item.price;
+        var cell1 = document.createElement("td");
+        var cell2 = document.createElement("td");
+        var cell3 = document.createElement("td");
 
-        const row = document.createElement("tr");
+        cell1.innerHTML = i + 1;
+        cell2.innerHTML = cart[i].name;
+        cell3.innerHTML = "₹" + cart[i].price;
 
-        row.innerHTML = `
-
-            <td>${index + 1}</td>
-
-            <td>${item.name}</td>
-
-            <td>₹${item.price.toFixed(2)}</td>
-
-        `;
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
 
         cartTable.appendChild(row);
 
-    });
+        total = total + cart[i].price;
+    }
 
-    totalPrice.textContent = "₹" + total.toFixed(2);
+    totalPrice.innerHTML = "₹" + total;
 
 }
 
@@ -183,66 +151,66 @@ function updateCart() {
 // Booking Form
 // ===============================
 
-bookingForm.addEventListener("submit", function (event) {
+bookButton.onclick = function (event) {
 
     event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var password = document.getElementById("password").value;
 
-    const email = document.getElementById("email").value.trim();
-
-    const phone = document.getElementById("phone").value.trim();
-
-    if (cart.length === 0) {
-
+    if (cart.length == 0) {
         alert("Please add at least one service.");
-
         return;
     }
 
-    if (name === "") {
-
+    if (name == "") {
         alert("Enter your name.");
-
         return;
     }
 
-    if (email === "") {
-
+    if (email == "") {
         alert("Enter your email.");
-
         return;
     }
 
-    if (phone.length !== 10) {
-
-        alert("Enter a valid phone number.");
-
+    if (phone == "") {
+        alert("Enter your phone number.");
         return;
     }
 
-    alert(
-        "Booking Successful!\n\n" +
-        "Customer : " + name +
-        "\nServices : " + cart.length +
-        "\nTotal Amount : ₹" +
-        cart.reduce((sum, item) => sum + item.price, 0)
-    );
+    if (phone.length != 10) {
+        alert("Phone number should contain 10 digits.");
+        return;
+    }
 
-    bookingForm.reset();
+    if (password == "") {
+        alert("Enter your password.");
+        return;
+    }
 
+    if (password.length < 6) {
+        alert("Password should contain at least 6 characters.");
+        return;
+    }
+
+    alert("Booking Successful!");
+
+    // Reset Form
+    document.getElementById("bookingForm").reset();
+
+    // Reset Cart
     cart = [];
+    currentService = 0;
 
-    currentIndex = 0;
+    updateTable();
+    showService();
 
-    updateCart();
-
-    loadService();
-
-});
+};
 
 // ===============================
-// Initialize
+// Initial Table
 // ===============================
 
-updateCart();
+updateTable();

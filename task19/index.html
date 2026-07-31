@@ -1,188 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Service Booking App</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 <body>
 
-    <!-- ================= Navbar ================= -->
+    <!-- ================= NAVBAR ================= -->
 
     <header>
+
         <nav class="navbar">
+
             <div class="logo">
                 Logo
             </div>
 
-            <ul class="nav-links">
+            <ul class="menu">
+
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">About Us</a></li>
+
             </ul>
-            <div class="user-profile">
-                <span class="username">
-                    Username
-                </span>
-                <button class="logout-btn">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </button>
+
+            <div class="user">
+
+                Username
+
             </div>
+
         </nav>
+
     </header>
 
-    <!-- ================= Main Container ================= -->
+    <!-- ================= MAIN SECTION ================= -->
 
-    <main class="container">
+    <div class="container">
 
-        <!-- ================= Left Panel ================= -->
+        <!-- ================= LEFT SIDE ================= -->
 
-        <section class="left-panel">
+        <div class="left">
+
             <!-- Added Items -->
+
             <div class="card">
-                <h2 class="title">
-                    Added Items
-                </h2>
-                <div class="table-container">
-    <table>
 
-        <thead>
-            <tr>
-                <th>S.No</th>
-                <th>Service Name</th>
-                <th>Price</th>
-            </tr>
-        </thead>
+                <h2>Added Items</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
 
-        <tbody id="cartTable">
-            <tr id="emptyRow">
-                <td colspan="3" class="empty">
-                    <div class="empty-icon">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <h3>No Items Added</h3>
-                    <p>Add items to the cart from the services bar</p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                    <tbody id="cartTable">
+                        <tr id="emptyRow">
+                            <td colspan="3">
+                                No Items Added
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <div class="total-section">
+                <div class="total">
                     <h3>Total Amount</h3>
                     <h3 id="totalPrice">
-                        ₹0.00
+                        ₹0
                     </h3>
                 </div>
-
             </div>
 
             <!-- Booking Form -->
 
-            <div class="card booking-card">
+            <div class="card">
                 <h2>Book Now</h2>
                 <form id="bookingForm">
-                    <div class="input-group">
-                        <label>Full Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="John Doe"
-                            required>
-                    </div>
-                    <div class="row">
-                        <div class="input-group">
-                            <label>Email ID</label>
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="mailid@gmail.com"
-                                required>
-                        </div>
+                    <label>
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter Name">
+                    <label>
+                        Email
+                    </label>
 
-                        <div class="input-group">
-                            <label>Phone Number</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                placeholder="9876543210"
-                                maxlength="10"
-                                required>
-                        </div>
-                    </div>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email">
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="Enter Phone Number">
+
+                    <!-- Password Field -->
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter Password">
+
+                    <!-- Separate Add to Cart Button -->
+
+                    <button
+                        type="button"
+                        id="cartButton">
+                        Add To Cart
+
+                    </button>
+
+                    <!-- Book Button -->
 
                     <button
                         type="submit"
-                        class="book-btn">
+                        id="bookButton">
                         Book Now
                     </button>
                 </form>
             </div>
-        </section>
+        </div>
 
-        <!-- ================= Right Panel ================= -->
+        <!-- ================= RIGHT SIDE ================= -->
 
-        <section class="right-panel">
+        <div class="right">
             <div class="card">
-                <h1>
+                <h2>
                     Browse Our Services
-                </h1>
+                </h2>
 
-                <p class="sub-title">
-                    Click on the add to cart button to add the services to your cart or press skip
+                <p>
+                    Select a service and add it to the cart.
                 </p>
                 <hr>
-                <!-- Service Card -->
+                <!-- Service Image -->
+                <img
+                    id="serviceImage"
+                    src="../task19/images/dry.png">
+                <!-- Service Name -->
+                <h2 id="serviceName">
+                    Dry Cleaning
+                </h2>
 
-                <div class="service-card">
-                    <img
-                        id="serviceImage"
-                        src="../task19/images/laundry.png"
-                        alt="Service">
+                <!-- Service Price -->
+                <h3 id="servicePrice">
+                    ₹200
+                </h3>
 
-                    <div class="service-info">
-                        <h2 id="serviceName">
-                            Dry Cleaning
-                        </h2>
-                        <h2 id="servicePrice">
-                            ₹200.00
-                        </h2>
-                    </div>
-                    <div class="button-group">
+                <!-- Service Buttons -->
 
-                        <button
-                            id="skipBtn"
-                            class="skip-btn">
-                            Skip Item
-                            <i class="fa-regular fa-circle-minus"></i>
+                <div class="buttons">
+                    <button
+                        type="button"
+                        id="skipButton">
+                        Skip Item
+                    </button>
 
-                        </button>
+                    <button
+                        type="button"
+                        id="nextCartButton">
+                        Add Item
+                    </button>
 
-                        <button
-                            id="addBtn"
-                            class="add-btn">
-                            Add Item
-                            <i class="fa-regular fa-circle-plus"></i>
-                        </button>
-                    </div>
                 </div>
                 <hr>
-                <div class="bottom-note">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <span>
-                        Add the items to the cart and book now
-                    </span>
-                </div>
+                <p>
+                    Add the services to your cart and complete the booking.
+                </p>
+
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
