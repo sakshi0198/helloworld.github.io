@@ -41,11 +41,11 @@ Service-Booking-App
 ├── README.md
 │
 └── images
-    ├── dry-cleaning.jpg
-    ├── sofa-cleaning.jpg
-    ├── carpet-cleaning.jpg
-    ├── laundry.jpg
-    └── leather-cleaning.jpg
+    ├── dry.png
+    ├── sofa.jpg
+    ├── carpet.jpg
+    ├── laundry.png
+    └── leather.jpg
 ```
 
 ---
