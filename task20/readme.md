@@ -1,24 +1,26 @@
-# Service Booking Web Application
+# Laundry Services Web App
 
-## About the Project
+## Project Overview
 
-This is a simple Service Booking Web Application created using HTML, CSS, and JavaScript. The application allows users to browse different cleaning services, add services to the cart, skip unwanted services, and book the selected services by filling out a booking form.
+This project is a simple Laundry Services Web Application created using HTML, CSS and JavaScript.
 
-The main purpose of this project is to practice HTML, CSS, JavaScript, DOM manipulation, and form validation.
+The purpose of this project is to allow users to view laundry services, add services to a cart, calculate the total amount, and book a service online. The project also sends a booking confirmation email using EmailJS.
 
 ---
 
 ## Features
 
 - Responsive navigation bar
-- Browse different services
-- Add services to the cart
-- Skip services
-- Display selected services in a table
-- Calculate the total amount automatically
+- Hero section with a "Book a Service Today" button
+- Service overview section
+- List of laundry services with prices
+- Add Item and Remove Item functionality
+- Dynamic cart updates
+- Total amount calculation
 - Booking form with validation
-- Password field validation
-- Booking confirmation message
+- Booking confirmation email using EmailJS
+- Newsletter subscription section
+- Footer with useful links and social media icons
 
 ---
 
@@ -26,26 +28,20 @@ The main purpose of this project is to practice HTML, CSS, JavaScript, DOM manip
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (DOM)
+- EmailJS
 
 ---
 
-## Project Structure
+## Folder Structure
 
 ```
-Service-Booking-App
-│
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-│
-└── images
-    ├── dry.png
-    ├── sofa.jpg
-    ├── carpet.jpg
-    ├── laundry.png
-    └── leather.jpg
+Laundry Services/
+
+│── index.html
+│── style.css
+│── script.js
+└── README.md
 ```
 
 ---
@@ -54,27 +50,67 @@ Service-Booking-App
 
 1. Download or clone the project.
 2. Open the project folder.
-3. Make sure the images are inside the **images** folder.
-4. Open **index.html** in your browser.
+3. Open `index.html` in your browser.
+4. Add a few services to the cart.
+5. Fill in the booking form.
+6. Click **Book Now**.
+
+If EmailJS is configured correctly, a booking confirmation email will be sent.
 
 ---
 
-## How to Use
+## EmailJS Setup
 
-1. Browse the available services.
-2. Click **Add To Cart** to add a service.
-3. Click **Skip Item** to move to the next service.
-4. Fill in your Name, Email, Phone Number, and Password.
-5. Click **Book Now** to complete the booking.
+Before using the booking feature, create an EmailJS account.
+
+Update the following values in `script.js`:
+
+- Public Key
+- Service ID
+- Template ID
+
+After adding your own EmailJS credentials, the email feature will work correctly.
+
+---
+
+## What I Learned
+
+While working on this project, I learned how to:
+
+- Build a complete web page using HTML and CSS.
+- Use Flexbox to create layouts.
+- Manipulate HTML elements using JavaScript.
+- Add and remove items dynamically using the DOM.
+- Calculate the total amount based on selected services.
+- Validate form inputs before submitting.
+- Connect a web page with EmailJS to send booking confirmation emails.
+- Make the website responsive for different screen sizes.
+
+---
+
+## Challenges I Faced
+
+During this project, I faced a few problems.
+
+- Initially, I had difficulty updating the cart dynamically.
+- I also had some issues while setting up EmailJS because the Service ID and Template ID were incorrect.
+- After checking the console and correcting the EmailJS configuration, the email feature started working properly.
+- I also spent some time improving the layout to make it cleaner and more user-friendly.
+
+Working through these issues helped me understand JavaScript and DOM manipulation better.
 
 ---
 
 ## Future Improvements
 
-- Remove items from the cart
-- Search services
-- Payment option
-- Store booking details using Local Storage
-- Connect with a database
+Some features that can be added later are:
+
+- User Login and Registration
+- Payment Gateway
+- Booking History
+- Order Tracking
+- Admin Dashboard
+- Search and Filter Services
+- Dark Mode
 
 ---
