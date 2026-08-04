@@ -1,7 +1,6 @@
 // ===============================
 // Scroll to Booking Section
 // ===============================
-emailjs.init("M2pJPNMYEi9zpWjfP");
 
 let scrollButton = document.getElementById("scrollBtn");
 scrollButton.addEventListener("click", function () {
@@ -25,7 +24,9 @@ let emptyMessage = document.getElementById("emptyMessage");
 
 // This array stores all selected services
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("laundryCart")) || [];
+updateCart();
+let nextId = 1;
 // ===============================
 // Update Cart Function
 // ===============================
@@ -63,6 +64,7 @@ for (let i = 0; i < addButtons.length; i++) {
             price: servicePrice
         });
         updateCart();
+        saveCart();
     });
 
 }
@@ -96,8 +98,8 @@ for (let i = 0; i < removeButtons.length; i++) {
         if (itemFound !== -1) {
 
             cart.splice(itemFound, 1);
-
             updateCart();
+            saveCart();
 
         }
 
@@ -112,6 +114,7 @@ for (let i = 0; i < removeButtons.length; i++) {
 // ===============================
 
 updateCart();
+saveCart();
 
 // =====================================
 // Booking Form
@@ -122,19 +125,28 @@ let bookButton = document.getElementById("bookNow");
 bookButton.addEventListener("click", function () {
 
     let fullName = document.getElementById("fullName").value.trim();
-
     let email = document.getElementById("email").value.trim();
-
     let phone = document.getElementById("phone").value.trim();
-
     let message = document.getElementById("message");
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailPattern.test(email)) {
+    message.style.color = "red";
+    message.innerHTML = "Please enter a valid email address.";
+    return;
+}
+
+let phonePattern = /^[6-9]\d{9}$/;
+
+if (!phonePattern.test(phone)) {
+    message.style.color = "red";
+    message.innerHTML = "Please enter a valid 10-digit phone number.";
+    return;
+}
 
     if (fullName === "" || email === "" || phone === "") {
-
         message.style.color = "red";
-
         message.innerHTML = "Please fill all the details.";
-
         return;
 
     }
@@ -142,9 +154,7 @@ bookButton.addEventListener("click", function () {
     if (cart.length === 0) {
 
         message.style.color = "red";
-
         message.innerHTML = "Please add at least one service.";
-
         return;
 
     }
@@ -152,38 +162,24 @@ bookButton.addEventListener("click", function () {
     // Total Price
 
     let total = 0;
-
     for (let i = 0; i < cart.length; i++) {
-
         total = total + cart[i].price;
-
     }
 
 
     // Service Names
 
     let serviceList = "";
-
     for (let i = 0; i < cart.length; i++) {
-
         serviceList += cart[i].name;
-
         if (i < cart.length - 1) {
-
             serviceList += ", ";
-
         }
-
     }
 
-
     // EmailJS
-
     emailjs.init("M2pJPNMYEi9zpWjfP");
-
-
     let templateParams = {
-
         customer_name: fullName,
         customer_email: email,
         customer_phone: phone,
@@ -192,9 +188,7 @@ bookButton.addEventListener("click", function () {
 
     };
 
-
     emailjs.send(
-
         "service_b0vajgi",
         "template_22ukun5",
         templateParams
@@ -202,30 +196,25 @@ bookButton.addEventListener("click", function () {
     )
 
    .then(function (response) {
-
     console.log("Email Sent Successfully");
     console.log(response);
-
     message.style.color = "green";
     message.innerHTML = "Thank you for booking the service. We will get back to you soon!";
-
     document.getElementById("fullName").value = "";
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";
 
     cart = [];
     updateCart();
+    saveCart();
 
 })
 .catch(function (error) {
-
     console.log("EmailJS Error:", error);
-
     message.style.color = "red";
     message.innerHTML = "Unable to send booking email.";
 
 });
-
 });
 
 // =====================================
@@ -240,9 +229,21 @@ subscribeButton.addEventListener("click", function () {
     if (name === "" || email === "") {
         alert("Please enter your name and email.");
         return;
-
     }
-    alert("Thank you for subscribing!");
+    let subscribers =
+    JSON.parse(localStorage.getItem("newsletter")) || [];
+
+subscribers.push({
+    name: name,
+    email: email
+});
+
+localStorage.setItem(
+    "newsletter",
+    JSON.stringify(subscribers)
+);
+
+alert("Thank you for subscribing!");
     inputs[0].value = "";
     inputs[1].value = "";
 
@@ -257,10 +258,12 @@ logoutButton.addEventListener("click", function () {
     let answer = confirm("Do you want to logout?");
     if (answer) {
         alert("You have logged out successfully.");
-
     }
-
 });
+
+function saveCart() {
+    localStorage.setItem("laundryCart", JSON.stringify(cart));
+}
 
 // =====================================
 // Optional Console Logs
