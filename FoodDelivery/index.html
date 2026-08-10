@@ -4,443 +4,616 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OmniFood - Healthy Food Delivery</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
+
+    <!-- Font Awesome for icons -->
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- ================= HERO SECTION ================= -->
-    <header class="hero">
-        <!-- Overlay -->
-        <div class="overlay"></div>
-        <!-- Navigation -->
+    <!-- ================= HEADER ================= -->
+
+    <header class="header" id="home">
+
         <nav class="navbar">
 
-            <div class="logo">
+             <div class="logo">
                 <img src="../FoodDelivery/assests/food delivery logo.png"
                     alt="OmniFood Logo">
             </div>
 
-            <label class="menu-toggle" tabindex="0">☰</label>
+            <!-- This checkbox is used for the CSS-only menu -->
+            <input
+                type="checkbox"
+                id="menu-toggle"
+                class="menu-toggle">
 
-<div class="mobile-menu">
-    <a href="#home">Food Delivery</a>
-    <a href="#how">How It Works</a>
-    <a href="#cities">Our Cities</a>
-    <a href="#pricing">Sign Up</a>
-</div>
-            
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Desktop and mobile navigation -->
+            <div class="nav-menu">
+
+                <a href="#food-delivery">FOOD DELIVERY</a>
+                <a href="#how-it-works">HOW IT WORKS</a>
+                <a href="#cities">OUR CITIES</a>
+                <a href="#signup" class="signup-link">SIGN-UP</a>
+
+            </div>
+
         </nav>
 
-        <!-- Hero Content -->
 
-        <div class="hero-content">
+        <!-- ================= HERO ================= -->
 
-            <h1>
-                GOODBYE JUNK FOOD
-                <br>
-                HELLO SUPER HEALTHY FOOD
-            </h1>
+        <div class="hero">
 
-            <div class="hero-buttons">
-                <a href="#" class="btn primary-btn">
-                    I'm Hungry
-                </a>
-                <a href="#" class="btn secondary-btn">
-                    Show me more
-                </a>
-            </div>
-        </div>
-    </header>
-
-<!-- ===========================
-     HOW IT WORKS SECTION
-=========================== -->
-
-<section id="how-it-works">
-
-    <div class="section-title">
-        <h2>HOW IT WORKS</h2>
-    </div>
-
-    <div class="work-container">
-
-        <!-- Left Side -->
-        <div class="phone-image">
-            <img src="../FoodDelivery/assests/mobile.png"
-                alt="Mobile App">
-        </div>
-
-        <!-- Right Side -->
-        <div class="steps">
-            <div class="step">
-                <div class="number">
-                    1
-                </div>
-                <p>
-                    Choose plan that fits best for your need and sign-up today
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="number">
-                    2
-                </div>
-                <p>
-                    Pay for the plan and download the app
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="number">
-                    3
-                </div>
-                <p>
-                    You are done! Start ordering!!
-                </p>
-            </div>
-
-            <!-- App Store Buttons -->
-
-            <div class="store-buttons">
-
-                <a href="#">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                        alt="App Store">
-                </a>
-
-                <a href="#">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                        alt="Google Play">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===========================
-     OUR CITIES
-=========================== -->
-
-<section class="cities">
-    <div class="section-title">
-        <h2>WE'RE CURRENTLY IN THESE CITIES</h2>
-    </div>
-    <div class="city-container">
-
-        <!-- Lisbon -->
-
-        <div class="city-card">
-            <img src="../FoodDelivery/assests/image 18.png"
-                alt="Lisbon">
-            <h3>LISBON</h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    1600+ Happy Eaters
-                </li>
-                <li>
-                    <i class="fa-solid fa-star"></i>
-                    50+ Chefs
-                </li>
-                <li>
-                    <i class="fa-brands fa-twitter"></i>
-                    @omnifood_lx
-                </li>
-            </ul>
-        </div>
-
-        <!-- London -->
-        <div class="city-card">
-
-            <img src="../FoodDelivery/assests/image 19.png"
-                alt="London">
-
-            <h3>LONDON</h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    1600+ Happy Eaters
-                </li>
-                <li>
-                    <i class="fa-solid fa-star"></i>
-                    50+ Chefs
-                </li>
-                <li>
-                    <i class="fa-brands fa-twitter"></i>
-                    @omnifood_ld
-                </li>
-            </ul>
-        </div>
-
-        <!-- Berlin -->
-
-        <div class="city-card">
-
-            <img src="../FoodDelivery/assests/image 20.png"
-                alt="Berlin">
-
-            <h3>BERLIN</h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    1400+ Happy Eaters
-                </li>
-                <li>
-                    <i class="fa-solid fa-star"></i>
-                    70+ Chefs
-                </li>
-                <li>
-                    <i class="fa-brands fa-twitter"></i>
-                    @omnifood_br
-                </li>
-            </ul>
-        </div>
-
-        <!-- San Francisco -->
-
-        <div class="city-card">
-            <img src="../FoodDelivery/assests/image 21.png"
-                alt="San Francisco">
-            <h3>SAN FRANCISCO</h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-user"></i>
-                    1800+ Happy Eaters
-                </li>
-                <li>
-                    <i class="fa-solid fa-star"></i>
-                    50+ Chefs
-                </li>
-                <li>
-                    <i class="fa-brands fa-twitter"></i>
-                    @omnifood_sf
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</section>
-
-<!-- ===========================
-     TESTIMONIALS
-=========================== -->
-
-<section class="testimonials">
-    <div class="testimonial-overlay"></div>
-    <div class="testimonial-content">
-        <div class="section-title white-title">
-            <h2>OUR CUSTOMER CAN'T LIVE WITHOUT US</h2>
-        </div>
-
-        <div class="testimonial-container">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <span class="quote">❝</span>
-                <p>
-                    Omnifood is just awesome! I just launched a startup which
-                    leaves me with no time for cooking, so Omnifood is a
-                    life-saver. Now that I got used to it, I couldn't live
-                    without my daily meals!
-                </p>
-                <div class="customer">
-                    <img src="../FoodDelivery/assests/testimonial1.jpg"
-                        alt="Customer">
-                    <h4>Alberto Duncan</h4>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-
-            <div class="testimonial-card">
-                <span class="quote">❝</span>
-                <p>
-                    Inexpensive, healthy and great-tasting meals delivered
-                    right to my home. We have lots of food delivery here in
-                    Lisbon, but no one comes even close to Omnifood. Me and
-                    my family are so in love!
-                </p>
-
-                <div class="customer">
-                    <img src="../FoodDelivery/assests/testimonial2.jpg"
-                        alt="Customer">
-
-                    <h4>Joana Silva</h4>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-
-            <div class="testimonial-card">
-                <span class="quote">❝</span>
-                <p>
-                    I was looking for a quick and easy food delivery service
-                    in San Francisco. I tried a lot of them and ended up with
-                    Omnifood. Best food delivery service in the Bay Area.
-                    Keep up the great work!
-                </p>
-
-                <div class="customer">
-                    <img src="../FoodDelivery/assests/testimonial3.jpg"
-                        alt="Customer">
-                    <h4>Milton Chapman</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= PRICING SECTION ================= -->
-
-<section class="pricing-section" id="signup">
-
-    <h2 class="section-title">
-        START EATING HEALTHY TODAY
-    </h2>
-
-    <div class="title-line"></div>
-
-    <div class="pricing-container">
-
-        <!-- Premium -->
-
-        <div class="price-card">
-
-            <div class="price-header">
-                <h3>PREMIUM</h3>
+            <div class="hero-content">
 
                 <h1>
-                    $399
-                    <span>/ month</span>
+                    GOODBYE JUNK FOOD.
+                    <br>
+                    HELLO SUPER HEALTHY FOOD.
                 </h1>
 
-                <p>That's only 13.90$ per meal</p>
+                <p>
+                    Eat healthy and delicious meals every day.
+                    Choose your meal plan and get fresh food
+                    delivered right to your door.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#signup" class="btn btn-main">
+                        I'm Hungry
+                    </a>
+
+                    <a href="#how-it-works" class="btn btn-outline">
+                        Show me more
+                    </a>
+
+                </div>
+
             </div>
-
-            <ul class="price-features">
-                <li><i class="fa-solid fa-check"></i> 1 meal everyday</li>
-                <li><i class="fa-solid fa-check"></i> Order 24×7</li>
-                <li><i class="fa-solid fa-check"></i> Access to newest creations</li>
-                <li><i class="fa-solid fa-check"></i> Free delivery</li>
-            </ul>
-
-            <button class="price-btn active-btn">
-                Sign up
-            </button>
 
         </div>
 
-        <!-- Pro -->
+    </header>
 
-        <div class="price-card">
 
-            <div class="price-header">
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-title">
+
+            <h2>
+                GET FOOD FAST &mdash; NOT FAST FOOD
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+                Our food delivery service makes healthy eating
+                simple and convenient.
+            </p>
+
+        </div>
+
+
+        <div class="steps-container">
+
+            <!-- Phone -->
+
+            <div class="phone-box">
+
+                <img
+                    src="../FoodDelivery/assests/mobile.png"
+                    alt="Mobile food application">
+
+            </div>
+
+
+            <!-- Steps -->
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <span class="step-number">1</span>
+
+                    <p>
+                        Choose a plan that fits your needs
+                        and sign-up today.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span class="step-number">2</span>
+
+                    <p>
+                        Pay for the plan and download
+                        the app.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span class="step-number">3</span>
+
+                    <p>
+                        You are done.
+                        Start ordering!
+                    </p>
+
+                </div>
+
+
+                <div class="store-buttons">
+
+                    <a href="#" class="store-button">
+                        <i class="fa-brands fa-google-play"></i>
+                        Google Play
+                    </a>
+
+                    <a href="#" class="store-button">
+                        <i class="fa-brands fa-apple"></i>
+                        App Store
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CITIES ================= -->
+
+    <section class="cities" id="cities">
+
+        <div class="section-title">
+
+            <h2>
+                WE'RE CURRENTLY IN THESE CITIES
+            </h2>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="city-grid">
+
+            <div class="city-card">
+
+                <img
+                    src="../FoodDelivery/assests/image 18.png"
+                    alt="Lisbon">
+
+                <h3>LISBON</h3>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    1600+ happy eaters
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-utensils"></i>
+                    60+ top chefs
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-twitter"></i>
+                    @omnifood_lisbon
+                </p>
+
+            </div>
+
+
+            <div class="city-card">
+
+                <img
+                    src="../FoodDelivery/assests/image 19.png"
+                    alt="London">
+
+                <h3>LONDON</h3>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    3700+ happy eaters
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-utensils"></i>
+                    120+ top chefs
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-twitter"></i>
+                    @omnifood_london
+                </p>
+
+            </div>
+
+
+            <div class="city-card">
+
+                <img
+                    src="../FoodDelivery/assests/image 20.png"
+                    alt="Berlin">
+
+                <h3>BERLIN</h3>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    2300+ happy eaters
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-utensils"></i>
+                    90+ top chefs
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-twitter"></i>
+                    @omnifood_berlin
+                </p>
+
+            </div>
+
+
+            <div class="city-card">
+
+                <img
+                    src="../FoodDelivery/assests/image 21.png"
+                    alt="San Francisco">
+
+                <h3>SAN-FRANCISCO</h3>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    1200+ happy eaters
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-utensils"></i>
+                    50+ top chefs
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-twitter"></i>
+                    @omnifood_sf
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="testimonials" id="food-delivery">
+
+        <div class="testimonial-overlay">
+
+            <div class="section-title light-title">
+
+                <h2>
+                    OUR CUSTOMERS CAN'T LIVE WITHOUT US
+                </h2>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial">
+
+                    <span class="quote">“</span>
+
+                    <p>
+                        OmniFood has completely changed
+                        the way I eat. The meals are healthy,
+                        fresh and always arrive on time.
+                    </p>
+
+                    <div class="person">
+
+                        <div class="avatar">
+                            JD
+                        </div>
+
+                        <span>
+                            John Doe
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <span class="quote">“</span>
+
+                    <p>
+                        I don't have to worry about cooking
+                        after a long day at work. The food
+                        tastes amazing.
+                    </p>
+
+                    <div class="person">
+
+                        <div class="avatar">
+                            AS
+                        </div>
+
+                        <span>
+                            Anna Smith
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <span class="quote">“</span>
+
+                    <p>
+                        The meal plans are easy to choose
+                        and the delivery service is excellent.
+                    </p>
+
+                    <div class="person">
+
+                        <div class="avatar">
+                            MK
+                        </div>
+
+                        <span>
+                            Mike Khan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRICING ================= -->
+
+    <section class="pricing" id="signup">
+
+        <div class="section-title">
+
+            <h2>
+                START EATING HEALTHY TODAY
+            </h2>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+            <!-- Premium -->
+
+            <div class="price-card featured">
+
+                <h3>PREMIUM</h3>
+
+                <p class="price">
+                    $399
+                    <span>/ month</span>
+                </p>
+
+                <p class="price-description">
+                    Perfect for people who want
+                    healthy food every day.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        1 meal every day
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Order 24/7
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Free delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Access to newest meals
+                    </li>
+
+                </ul>
+
+                <a href="#" class="price-button">
+                    Sign up
+                </a>
+
+            </div>
+
+
+            <!-- Pro -->
+
+            <div class="price-card">
 
                 <h3>PRO</h3>
 
-                <h1>
+                <p class="price">
                     $199
                     <span>/ month</span>
-                </h1>
+                </p>
 
-                <p>That's only 10.90$ per meal</p>
+                <p class="price-description">
+                    A good choice for healthy
+                    weekly meals.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        1 meal 10 days/month
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Order 24/7
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Free delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-xmark"></i>
+                        Access to newest meals
+                    </li>
+
+                </ul>
+
+                <a href="#" class="price-button">
+                    Sign up
+                </a>
 
             </div>
 
-            <ul class="price-features">
 
-                <li><i class="fa-solid fa-check"></i> 1 meal in 10</li>
-                <li><i class="fa-solid fa-check"></i> Order 24×7</li>
-                <li><i class="fa-solid fa-check"></i> Access to newest creations</li>
-                <li><i class="fa-solid fa-check"></i> Free delivery</li>
+            <!-- Starter -->
 
-            </ul>
-
-            <button class="price-btn">
-                Sign up
-            </button>
-
-        </div>
-
-        <!-- Starter -->
-
-        <div class="price-card">
-
-            <div class="price-header">
+            <div class="price-card">
 
                 <h3>STARTER</h3>
 
-                <h1>
-                    19$
+                <p class="price">
+                    $19
                     <span>/ meal</span>
-                </h1>
+                </p>
 
-                <p>Pay only when you order</p>
+                <p class="price-description">
+                    Try healthy food whenever
+                    you need it.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        1 meal
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Order from 8am to 12pm
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-xmark"></i>
+                        Free delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-xmark"></i>
+                        Access to newest meals
+                    </li>
+
+                </ul>
+
+                <a href="#" class="price-button">
+                    Sign up
+                </a>
 
             </div>
 
-            <ul class="price-features">
+        </div>
 
-                <li><i class="fa-solid fa-check"></i> 1 meal month</li>
-                <li><i class="fa-solid fa-check"></i> Order 24×7</li>
-                <li><i class="fa-solid fa-xmark"></i> Access to newest creations</li>
-                <li><i class="fa-solid fa-check"></i> Free delivery</li>
+    </section>
 
-            </ul>
 
-            <button class="price-btn">
-                Sign up
-            </button>
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-links">
+
+                <a href="#">About us</a>
+                <a href="#">Blog</a>
+                <a href="#">Press</a>
+                <a href="#">iOS App</a>
+                <a href="#">Android App</a>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
-</section>
+        <p class="copyright">
+            Copyright &copy; 2026 OmniFood. All rights reserved.
+        </p>
 
-<!-- ================= FOOTER ================= -->
+    </footer>
 
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- Left Side -->
-
-        <div class="footer-links">
-
-            <a href="#">About us</a>
-            <a href="#">Blog</a>
-            <a href="#">Press</a>
-            <a href="#">iOS App</a>
-            <a href="#">Android App</a>
-
-        </div>
-
-        <!-- Right Side -->
-
-        <div class="footer-social">
-
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-
-            <a href="#"><i class="fa-brands fa-google"></i></a>
-
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-
-        </div>
-
-    </div>
-
-    <p class="copyright">
-        Copyright © 2025 by OmniFood. All rights reserved.
-    </p>
-
-</footer>
 </body>
+
 </html>
