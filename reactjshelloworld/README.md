@@ -1,16 +1,31 @@
-# React + Vite
+# ReactJS - Hello World
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## About the Project
 
-Currently, two official plugins are available:
+This is a simple ReactJS project created for the ReactJS Hello World assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The main purpose of this project is to understand the basic structure of a React application and display a simple message on the browser.
 
-## React Compiler
+The application displays:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Hello, World!**
 
-## Expanding the Oxlint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- ReactJS
+- JavaScript
+- HTML
+- CSS
+- Vite
+- Node.js
+
+## How to Run the Project
+
+1. Open the project folder in VS Code.
+
+2. Open the terminal.
+
+3. Install the required packages:
+
+```bash
+npm install
